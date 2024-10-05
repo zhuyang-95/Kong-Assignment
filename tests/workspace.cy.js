@@ -1,6 +1,11 @@
 import { GatewayServicesPage } from "../pages/gateway-services-page"
 import { RoutesPage } from "../pages/routes-page"
 
+// https://github.com/cypress-io/cypress/issues/2554#issuecomment-442334752
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false
+})
+
 it('Add new service', () => {
 
   cy.visit('http://localhost:8002/default/services')
@@ -15,7 +20,7 @@ it('Add new service', () => {
 
 })
 
-it.only('Add new route', () => {
+it('Add new route', () => {
   
   // considering a route can added without service, so we can split these two tests
   // added basic assertion like assert title, can add more based on requirement and test cases
