@@ -4,12 +4,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Clone git project
+      - name: Clone project
         uses: actions/checkout@v4
       - name: Start docker
-        uses: cypress-io/github-action@v6
-        with:
-          runTests: false
-          build: docker-compose up -d
-      - name: Run tests
+        run: docker-compose up -d
+      - name: Install dependencies & Run tests
         uses: cypress-io/github-action@v6
