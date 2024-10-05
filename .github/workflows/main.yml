@@ -7,6 +7,6 @@ jobs:
       - name: Clone project
         uses: actions/checkout@v4
       - name: Start docker
-        run: docker-compose up -d
+        run: docker compose up -d
       - name: Install dependencies & Run tests
         uses: cypress-io/github-action@v6
