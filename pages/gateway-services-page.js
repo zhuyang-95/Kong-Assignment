@@ -10,7 +10,6 @@ export class GatewayServicesPage extends KongPage {
   
   elements = {
 
-    pageLoading : () => cy.get('.skeleton-table-wrapper > :nth-child(1)'),
     addNewGatewayServiceBtn : () => cy.get('[data-testid="new-gateway-service"]'),
     toolbarAddNewGatewayServiceBtn : () => cy.get('[data-testid="toolbar-add-gateway-service"]'),
     filterBtn : () => cy.get('[data-testid="filter-button"]'),

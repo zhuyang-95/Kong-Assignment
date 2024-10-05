@@ -1,18 +1,11 @@
 import { GatewayServicesPage } from "../pages/gateway-services-page"
 import { RoutesPage } from "../pages/routes-page"
 
-
-// beforeEach(() => {
-//   // cy.intercept('/default/*').as('getServices')
-//   cy.visit('http://localhost:8002/default/services')
-//   cy.wait(2000)
-//   // cy.wait("@getServices")
-//   // TODO: wait for services panel.
-// })
-
 it('Add new service', () => {
 
   cy.visit('http://localhost:8002/default/services')
+  cy.intercept('/default/services?sort_desc=1&size=30').as('getServices')
+  cy.wait("@getServices")
   const gatewayService = new GatewayServicesPage()
   gatewayService.tapAddNewBtn()
   gatewayService.elements.newGatewayServicePageTitle().should('have.text', 'New Gateway Service')
@@ -27,7 +20,8 @@ it.only('Add new route', () => {
   // considering a route can added without service, so we can split these two tests
   // added basic assertion like assert title, can add more based on requirement and test cases
   cy.visit('http://localhost:8002/default/routes')
-  cy.wait(2000)
+  cy.intercept('/default/routes?sort_desc=1&size=30').as('getRoutes')
+  cy.wait("@getRoutes")
   const route = new RoutesPage()
   route.tapAddNewBtn()
   route.elements.newRoutePageTitle().should('have.text', 'Create Route')
