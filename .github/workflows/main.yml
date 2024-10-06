@@ -10,3 +10,8 @@ jobs:
         run: docker compose up -d
       - name: Install dependencies & Run tests
         uses: cypress-io/github-action@v6
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: report/test-report.html
