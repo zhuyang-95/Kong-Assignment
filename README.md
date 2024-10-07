@@ -1,13 +1,14 @@
 # Kong Assignment
 Small test automation for Kong Assignment using Cypress + JavaScript.
 
-## Set Up:
+## Get Started
+1. Set Up
     npm install
 
-## Run Test:
+2. Run Test:
     npm test
 
-## Debug Test:
+3. Debug Test:
     npm run debug
 
 ## Design Considerations & Assumptions
