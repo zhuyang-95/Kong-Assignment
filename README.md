@@ -4,17 +4,17 @@ Small test automation for Kong Assignment using Cypress + JavaScript.
 ## Get Started
 1. Set Up
 ```bash
-    npm install
+npm install
 ```
 
 2. Run Test:
 ```bash
-    npm test
+npm test
 ```
 
 3. Debug Test:
 ```bash
-    npm run debug
+npm run debug
 ```
 
 ## Design Considerations & Assumptions
