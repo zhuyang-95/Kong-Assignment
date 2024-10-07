@@ -21,8 +21,6 @@ it('Add new route', () => {
 
   const route = new RoutesPage()
   
-  // considering a route can added without service, so we can split these two tests
-  // added basic assertion like assert title, can add more based on requirement and test cases
   cy.visit('http://localhost:8002/default/routes')
   cy.intercept('/default/routes?sort_desc=1&size=30').as('getRoutes')
   cy.wait("@getRoutes")

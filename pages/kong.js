@@ -1,7 +1,7 @@
 import 'cypress-mochawesome-reporter/register'
 
 /*
-  Base Page for Kong project
+  Base Page for Kong test project
 */
 
 export class KongPage {

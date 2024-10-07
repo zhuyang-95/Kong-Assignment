@@ -2,11 +2,7 @@ import { KongPage } from "./kong"
 
 export class RoutesPage extends KongPage {
 
-  // Route "Test_route" successfully created!
-
-  
   elements = {
-
     addNewRouteBtn : () => cy.get('[data-testid="new-route"]'),
     toolbarAddNewRouteBtn : () => cy.get('[data-testid="toolbar-add-route"'),
     filterBtn : () => cy.get('[data-testid="filter-button"]'),
@@ -19,7 +15,6 @@ export class RoutesPage extends KongPage {
     routePathInput : () => cy.get('[data-testid="route-form-paths-input-1"]'),
     saveBtn : () => cy.get('[data-testid="route-form-submit"]'),
     saveSuccessMsg : () => cy.get('.toaster-message')
-
   }
 
   tapAddNewBtn() {

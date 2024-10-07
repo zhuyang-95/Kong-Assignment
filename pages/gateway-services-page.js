@@ -1,15 +1,8 @@
 import { KongPage } from "./kong"
 
 export class GatewayServicesPage extends KongPage {
-
-  // cy.get('[data-testid="filter-button"]')
-  // cy.get('[data-testid="toolbar-add-gateway-service"]')
-  // Gateway Service "Test_1727937172661" successfully created!
-  // Route "Test_route" successfully created!
-
   
   elements = {
-
     addNewGatewayServiceBtn : () => cy.get('[data-testid="new-gateway-service"]'),
     toolbarAddNewGatewayServiceBtn : () => cy.get('[data-testid="toolbar-add-gateway-service"]'),
     filterBtn : () => cy.get('[data-testid="filter-button"]'),
@@ -19,7 +12,6 @@ export class GatewayServicesPage extends KongPage {
     upstreamUrlInput : () => cy.get('[data-testid="gateway-service-url-input"]'),
     saveBtn : () => cy.get('[data-testid="service-form-submit"]'),
     saveSuccessMsg : () => cy.get('.toaster-message')
-
   }
 
   tapAddNewBtn() {
@@ -37,5 +29,4 @@ export class GatewayServicesPage extends KongPage {
     this.elements.saveBtn().click()
   }
 
-  
 }
